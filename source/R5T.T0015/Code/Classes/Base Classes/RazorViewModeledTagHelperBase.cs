@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using R5T.D0061;
 using R5T.T0016;
 
+using Instances = R5T.T0015.Instances;
+
 
 namespace Microsoft.AspNetCore.Razor.TagHelpers
 {
@@ -37,11 +39,11 @@ namespace Microsoft.AspNetCore.Razor.TagHelpers
             // Remove the element if we don't want to preserve it.
             if (this.PreserveElement)
             {
-                output.TagName = HtmlTags.div;
+                output.TagName = Instances.HtmlTags.div;
             }
             else
             {
-                output.TagName = Strings.Empty;
+                output.TagName = Instances.Strings.Empty;
             }
         }
     }
